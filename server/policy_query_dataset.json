@@ -1,0 +1,77 @@
+[
+    {
+        "query": "How many days of paid annual leave do employees get?",
+        "relevant_sections": ["leave_policy_structured.txt Section 1"],
+        "ground_truth_answer": "Employees are entitled to 15 days of paid annual leave per calendar year."
+    },
+    {
+        "query": "What is the company's policy on sick leave?",
+        "relevant_sections": ["leave_policy_structured.txt Section 2"],
+        "ground_truth_answer": "Employees may take up to 10 days of paid sick leave per year. For absences exceeding 3 days, a medical certificate is required."
+    },
+    {
+        "query": "Can employees carry over unused vacation days?",
+        "relevant_sections": ["leave_policy_structured.txt Section 5"],
+        "ground_truth_answer": "Unused annual leave cannot be carried over to the following year, except in exceptional cases approved by HR."
+    },
+    {
+        "query": "Does the health insurance cover dental and vision?",
+        "relevant_sections": ["health_insurance_policy_structured.txt Section 3"],
+        "ground_truth_answer": "Yes, the health insurance plan includes both dental and vision coverage for routine exams, cleanings, and basic optical services."
+    },
+    {
+        "query": "Are dependents covered under the company's health insurance?",
+        "relevant_sections": ["health_insurance_policy_structured.txt Section 1"],
+        "ground_truth_answer": "The company's health insurance policy covers all full-time employees and their dependents, including spouses and children."
+    },
+    {
+        "query": "What is the company's policy on life insurance?",
+        "relevant_sections": ["health_insurance_policy_structured.txt Section 4"],
+        "ground_truth_answer": "All employees are covered by a company-provided life insurance plan, covering up to twice the employee's annual salary."
+    },
+    {
+        "query": "Is there a bonus system based on performance?",
+        "relevant_sections": ["compensation_benefits_structured.txt Section 2"],
+        "ground_truth_answer": "Employees are eligible for a performance-based bonus at the end of each fiscal year, with amounts varying based on performance metrics and company profitability."
+    },
+    {
+        "query": "Does the company match 401(k) contributions?",
+        "relevant_sections": ["compensation_benefits_structured.txt Section 3"],
+        "ground_truth_answer": "The company offers a 401(k) retirement savings plan, matching 50% of contributions up to 6% of the employee's salary."
+    },
+    {
+        "query": "What are the standard work hours?",
+        "relevant_sections": ["work_hours_overtime_structured.txt Section 1"],
+        "ground_truth_answer": "The standard work week is 40 hours, from Monday to Friday, 9:00 AM to 5:00 PM."
+    },
+    {
+        "query": "Is there an overtime pay policy?",
+        "relevant_sections": ["work_hours_overtime_structured.txt Section 3"],
+        "ground_truth_answer": "Non-exempt employees are eligible for overtime pay at 1.5 times their hourly rate for hours worked beyond 40 per week."
+    },
+    {
+        "query": "Can employees work remotely?",
+        "relevant_sections": ["remote_work_policy_structured.txt Section 1"],
+        "ground_truth_answer": "Employees in roles that do not require physical presence at the office may apply for remote work, subject to department and role eligibility."
+    },
+    {
+        "query": "What tools does the company provide for remote work?",
+        "relevant_sections": ["remote_work_policy_structured.txt Section 2"],
+        "ground_truth_answer": "The company provides necessary equipment for remote work, including laptops and secure access to the company network."
+    },
+    {
+        "query": "Are employees eligible for professional development courses?",
+        "relevant_sections": ["training_development_policy_structured.txt Section 1"],
+        "ground_truth_answer": "The company offers various learning programs, including leadership training, technical skills workshops, and soft skills development."
+    },
+    {
+        "query": "Is there a budget for professional development?",
+        "relevant_sections": ["training_development_policy_structured.txt Section 2"],
+        "ground_truth_answer": "Employees have an annual budget of $1,500 for professional development, which can be used for courses, certifications, and conferences."
+    },
+    {
+        "query": "Elaborate on how the company offer tuition reimbursement?",
+        "relevant_sections": ["training_development_policy_structured.txt Section 3"],
+        "ground_truth_answer": "Employees are eligible for tuition reimbursement up to $5,000 per year for courses directly related to their roles and responsibilities."
+    }
+]

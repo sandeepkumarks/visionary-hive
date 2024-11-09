@@ -1,0 +1,88 @@
+services:
+  flower_server:
+    build: .
+    command: python flower_server.py
+    ports:
+      - "8080:8080"  # Expose Flower server's port
+    restart: always
+    networks:
+      - flower_net
+
+  client1:
+    build: .
+    command: uvicorn run_client:app --host 0.0.0.0 --port 8000 --reload
+    depends_on:
+      - flower_server
+    restart: always
+    environment:
+      - FL_SERVER_ADDRESS=flower_server:8080
+    ports:
+      - "8001:8000"  # Expose FastAPI port for client1
+    volumes:
+      - .:/app  # Mount code directory as a volume for live reloading
+    networks:
+      - flower_net
+
+  client2:
+    build: .
+    command: uvicorn run_client:app --host 0.0.0.0 --port 8000 --reload
+    depends_on:
+      - flower_server
+    restart: always
+    environment:
+      - FL_SERVER_ADDRESS=flower_server:8080
+    ports:
+      - "8002:8000"  # Expose FastAPI port for client2
+    volumes:
+      - .:/app
+    networks:
+      - flower_net
+
+  client3:
+    build: .
+    command: uvicorn run_client:app --host 0.0.0.0 --port 8000 --reload
+    depends_on:
+      - flower_server
+    restart: always
+    environment:
+      - FL_SERVER_ADDRESS=flower_server:8080
+    ports:
+      - "8003:8000"  # Expose FastAPI port for client3
+    volumes:
+      - .:/app
+    networks:
+      - flower_net
+
+#  client4:
+#    build: .
+#    command: uvicorn run_client:app --host 0.0.0.0 --port 8000 --reload
+#    depends_on:
+#      - flower_server
+#    restart: always
+#    environment:
+#      - FL_SERVER_ADDRESS=flower_server:8080
+#    ports:
+#      - "8004:8000"  # Expose FastAPI port for client4
+#    volumes:
+#      - .:/app
+#    networks:
+#      - flower_net
+#
+#  client5:
+#    build: .
+#    command: uvicorn run_client:app --host 0.0.0.0 --port 8000 --reload
+#    depends_on:
+#      - flower_server
+#    restart: always
+#    environment:
+#      - FL_SERVER_ADDRESS=flower_server:8080
+#    ports:
+#      - "8005:8000"  # Expose FastAPI port for client5
+#    volumes:
+#      - .:/app
+#    networks:
+#      - flower_net
+
+networks:
+  flower_net:
+    driver: bridge

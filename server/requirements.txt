@@ -1,0 +1,13 @@
+torch
+torchvision
+torchaudio
+faiss-cpu
+pydantic
+fastapi
+uvicorn
+transformers
+sentence-transformers
+numpy
+flwr
+nltk
+rouge-score==0.0.4
