@@ -31,7 +31,7 @@ Ensure the following are installed:
 1. **Clone the Repository**
    ```bash
    git clone <repository-url>
-   cd scalable_rag
+   cd visionary-hive/server
    ```
 
 2. **Set Up Python Environment**
@@ -61,6 +61,32 @@ Ensure the following are installed:
    ```bash
    uvicorn run_client:app --host 0.0.0.0 --port 8001
    ```
+## Frontend Setup (React)
+
+### Steps to Start React Client Server
+
+1. **Navigate to the Client Directory**
+   ```bash
+   cd visionary-hive/client
+   ```
+
+2. **Install Dependencies**
+   Ensure that you have `npm` installed. Then, install the necessary packages:
+   ```bash
+   npm install
+   ```
+
+3. **Start the React Development Server**
+   Launch the React server:
+   ```bash
+   npm start
+   ```
+
+4. **Access the Frontend**
+   Once the server is running, open your browser and go to:
+   ```
+   http://localhost:3000
+
 
 ## Usage
 
